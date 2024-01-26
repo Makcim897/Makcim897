@@ -1,10 +1,16 @@
+import numpy as np
 import pandas as pd
-while True:
-    article = pd.read_csv('data1.csv', delimiter=';')
-    names = ['user_id', 'user_height', 'user_age']
-    article.to_csv("data1.csv", index=False, sep=";")
-    col = str(input(''))
-    num = int(input(''))
-    def read_slot():
-        print(article.at[num, col])
-    read_slot()
+import matplotlib.pyplot as plt
+x = [1,2,3,1,2,3]
+x = np.array([1,2,3,1,2,3])
+# x + pd.Series(np.array([1,2,3,1,2,3]))
+
+plt.figure(figsize=(8,4))
+plt.plot(x, linewidth=2, color="green", marker="*", linestyle="dashed", label="line_1")
+plt.legend()
+plt.grid(color="gray", linestyle="-", linewidth=1.5)
+plt.yticks()
+plt.xticks()
+plt.xlabel("ось фбсцисс")
+plt.ylabel("ось ординат")
+plt.show()
